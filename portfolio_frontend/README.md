@@ -1,82 +1,53 @@
-# Lightweight React Template for KAVIA
+# Sathish Kumar - Portfolio Frontend
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A modern, responsive, and minimal personal portfolio built with React, TailwindCSS, and Framer Motion.
 
 ## Features
+- Sticky navigation bar with smooth scroll
+- Light/Dark mode toggle with persistence (localStorage)
+- Animated hero with soft background accents
+- Experience timeline (scroll animations)
+- Skills grid with indicators
+- Projects grid with action links
+- Education cards
+- Contact form with validation + EmailJS integration
+- Floating WhatsApp button (FAB)
+- Mock AI chat popup at bottom-left
+- Accessibility-first and responsive
+- Performance: lazy UI patterns, efficient CSS
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
-
-## Getting Started
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+## Quick Start
+1. Install dependencies
+```bash
+npm install
 ```
 
-### Components
+2. Copy environment file and fill values
+```bash
+cp .env.example .env
+# Fill REACT_APP_EMAILJS_* and REACT_APP_WHATSAPP_NUMBER
+```
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+3. Run the app
+```bash
+npm start
+```
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+## Environment Variables
+- REACT_APP_EMAILJS_PUBLIC_KEY
+- REACT_APP_EMAILJS_SERVICE_ID
+- REACT_APP_EMAILJS_TEMPLATE_ID
+- REACT_APP_SITE_URL
+- REACT_APP_WHATSAPP_NUMBER
 
-## Learn More
+## Structure
+- src/components/* — UI components by section
+- src/App.js — composition of all sections
+- Tailwind configured via tailwind.config.js and postcss.config.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Notes
+- EmailJS requires the template to include variables: name, email, message.
+- WhatsApp FAB uses REACT_APP_WHATSAPP_NUMBER to build a wa.me link.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+MIT
